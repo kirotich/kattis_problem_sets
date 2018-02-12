@@ -2,6 +2,7 @@ package a2;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class VirtualFriends {
 
@@ -11,17 +12,21 @@ public class VirtualFriends {
                 String name;
                 Node parent;
                 int noOfFriends;
-                //int noOfFriends;
+
             }
             /*
                 create a set with one user
              */
             public void makeSet(String name){
-                Node node = new Node();
-                node.name = name;
-                node.parent = node;
-                node.noOfFriends = 1;
-                map.put(name,node);
+                if(!map.containsKey(name)) {
+
+                    Node node = new Node();
+                    node.name = name;
+                    node.parent = node;
+                    node.noOfFriends = 1;
+
+                    map.put(name, node);
+                }
             }
 
 //            public String findSet(String name){
@@ -55,7 +60,7 @@ public class VirtualFriends {
 
                 if(parentA.name.equals(parentB.name)) return false;
 
-                if(parentA.noOfFriends >= parentB.noOfFriends){
+                if(parentA.noOfFriends > parentB.noOfFriends){
                     parentA.noOfFriends = (parentA.noOfFriends + parentB.noOfFriends);
                     parentB.parent = parentA;
                 } else {
@@ -67,7 +72,48 @@ public class VirtualFriends {
 
             }
 
-            
+            public static void main (String [] args){
+
+                VirtualFriends test = new VirtualFriends();
+
+                Scanner input = new Scanner(System.in);
+               //System.out.println("Enter No of Test Cases");
+
+                int testCases = Integer.parseInt(input.nextLine());
+
+               // System.out.println("FriendShips");
+                int friendShips = Integer.parseInt(input.nextLine());
+
+                while(testCases>0){
+
+
+                    while(friendShips > 0){
+                        //System.out.println("Make friends");
+                        String user1 = input.next();
+                        String user2 = input.next();
+
+
+                        test.makeSet(user1);
+                        test.makeSet(user2);
+                        if(test.union(user1,user2)){
+                            System.out.print(test.findSet(test.map.get(user1)).noOfFriends);
+                        } else {
+                            System.out.print(test.findSet(test.map.get(user1)).noOfFriends);
+                        }
+
+
+
+                        //if(input.hasNext()) input.nextLine();
+
+                        friendShips--;
+                    }
+                    testCases--;
+                }
+
+
+
+
+            }
 
 
 
