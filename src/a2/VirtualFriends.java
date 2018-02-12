@@ -81,7 +81,7 @@ public class VirtualFriends {
 
                 int testCases = Integer.parseInt(input.nextLine());
 
-               // System.out.println("FriendShips");
+               //System.out.println("FriendShips");
                 int friendShips = Integer.parseInt(input.nextLine());
 
                 while(testCases>0){
