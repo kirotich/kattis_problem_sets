@@ -10,17 +10,20 @@ import java.util.Scanner;
 public class GoldBach{
     public static void   main (String [] args){
         Scanner input = new Scanner(System.in);
-        
+
         int tests = Integer.parseInt(input.nextLine());
 
         for( int i=0; i<tests; i++){
             int evenNo = Integer.parseInt(input.nextLine());
-            goldbach(evenNo);
+            goldBach(evenNo);
 
         }
 
     }
 
+    /*
+        Generates primes numbers using Sieve of Eratosthenes Algorithm
+     */
     static ArrayList<Integer> generatePrime(int n){
         boolean[] primes = new boolean[n+1];
         ArrayList<Integer> res = new ArrayList<>();
@@ -29,6 +32,7 @@ public class GoldBach{
             primes[i] = true;
         }
 
+        //Cancel out multiples of primes
         for(int factor = 2; factor*factor <=n; factor++) {
             if(primes[factor]){
                 for(int j=factor; factor*j <=n; j++) {
@@ -52,7 +56,7 @@ public class GoldBach{
      */
 
 
-    static void goldbach(int evenNum){
+    static void goldBach(int evenNum){
         ArrayList<Integer> arr = generatePrime(evenNum);
 
         Map<Integer,Integer> map = new HashMap<>();

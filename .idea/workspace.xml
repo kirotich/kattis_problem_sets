@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bddd2cec-125e-4725-af3c-0d949677b46a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/kattis_problem_sets/a2/VirtualFriends.class" afterPath="$PROJECT_DIR$/out/production/kattis_problem_sets/a2/VirtualFriends.class" />
-      <change beforePath="$PROJECT_DIR$/src/a2/VirtualFriends.java" afterPath="$PROJECT_DIR$/src/a2/VirtualFriends.java" />
-      <change beforePath="$PROJECT_DIR$/src/a2/virtualfriends.cpp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/a3" afterPath="$PROJECT_DIR$/src/a3" />
+      <change beforePath="$PROJECT_DIR$/src/a5/GoldBach.java" afterPath="$PROJECT_DIR$/src/a5/GoldBach.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="GoldBach.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/a5/GoldBach.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -528,8 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/a5/GoldBach.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="360">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
