@@ -73,22 +73,21 @@ public class VirtualFriends {
             }
 
             public static void main (String [] args){
-
                 VirtualFriends test = new VirtualFriends();
 
                 Scanner input = new Scanner(System.in);
-               //System.out.println("Enter No of Test Cases");
+                System.out.println("Enter No of Test Cases");
 
                 int testCases = Integer.parseInt(input.nextLine());
 
-               //System.out.println("FriendShips");
+                System.out.println("FriendShips");
                 int friendShips = Integer.parseInt(input.nextLine());
 
                 while(testCases>0){
 
 
                     while(friendShips > 0){
-                        //System.out.println("Make friends");
+                        System.out.println("Make friends");
                         String user1 = input.next();
                         String user2 = input.next();
 
@@ -102,14 +101,10 @@ public class VirtualFriends {
                         }
 
 
-
-                        //if(input.hasNext()) input.nextLine();
-
                         friendShips--;
                     }
                     testCases--;
                 }
-
 
 
 

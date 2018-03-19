@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"files.associations": {
+			"stdlib.h": "c",
+			"pthread.h": "c",
+			"semaphore.h": "c",
+			"limits.h": "c",
+			"iostream": "cpp"
+		}
+	}
+}
