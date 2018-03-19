@@ -65,6 +65,7 @@ public class GoldBach{
         ArrayList<Integer> num2 = new ArrayList<>();
         int count = 0;
 
+        //Map prime number with its index
         for(int i=0; i<arr.size(); i++){
             int complement = evenNum - arr.get(i);
 
