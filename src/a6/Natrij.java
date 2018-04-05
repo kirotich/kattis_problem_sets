@@ -1,7 +1,5 @@
 package a6;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,13 +12,9 @@ public class Natrij {
         String [] curr = input.nextLine().split(":");
         String [] expl = input.nextLine().split(":");
 
-
-
         int currTime = toSeconds(curr);
         int expTime = toSeconds(expl);
 
-        System.out.println("Curr Time in Seconds " +  currTime);
-        System.out.println("Explosion Time in Seconds " + expTime);
 
         int totalSec;
 
@@ -32,10 +26,14 @@ public class Natrij {
             totalSec = expTime - currTime;
         }
 
-        System.out.println("Duration");
-        ArrayList<Integer> timeDiff = duration(totalSec);
-        System.out.println(timeDiff);
+        if(totalSec <= (24*3600)){
+            ArrayList<Integer> timeDiff = duration(totalSec);
+            String res = String.format("%02d:%02d:%02d", timeDiff.get(0), timeDiff.get(1), timeDiff.get(2));
+            res = res.equals("00:00:00") ? "24:00:00" : res;
+            System.out.print(res);
 
+        }
+        input.close();
 
     }
 
@@ -51,8 +49,8 @@ public class Natrij {
         ArrayList<Integer> duration = new ArrayList<>();
 
         int sec = seconds % 60;
-        int mins = (seconds % 60) / 60;
-        int hrs = seconds / 3600;
+        int mins = (seconds % 3600) / 60;
+        int hrs = (seconds / 3600) % 24;
 
         duration.add(hrs);
         duration.add(mins);
