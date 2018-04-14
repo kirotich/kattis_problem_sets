@@ -1,15 +1,12 @@
 package Competition;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.*;
 
 public class RPSci {
 
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
-        //System.out.println("No of Players");
+
         int [] players = new int[sc.nextInt()];
         System.out.println("No of Games");
         int noOfGames = sc.nextInt();
@@ -39,8 +36,10 @@ public class RPSci {
         }
 
         for(int k=0; k<players.length; k++){
-            String wins = Double.toString((players[k]/totalWins));
-            String.format("%.3g%", wins);
+            double win = players[k]/totalWins;
+            win = Math.round(win * 1000) / 1000d;
+            String wins = Double.toString((win));
+            //String.format("%.52g%n", wins);
             System.out.println(wins);
 
         }
